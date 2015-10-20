@@ -11,9 +11,9 @@ RUN apt-get update \
     && easy_install pip \
     && pip install panoramix
 
-RUN mkdir /panoramix \
-COPY admin.config /panoramix/ \
-COPY panoramix_config.py /panoramix/ \
+RUN mkdir /panoramix
+COPY admin.config /panoramix/
+COPY panoramix_config.py /panoramix/
 
 RUN fabmanager create-admin --app panoramix < /panoramix/admin.config \
     && panoramix db upgrade \
