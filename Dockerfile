@@ -4,10 +4,7 @@ ENV PANORAMIX_VERSION 0.5.1
 
 RUN apt-get update \
     && apt-get -y upgrade \
-    && apt-get install -y curl git python python-setuptools vim wget \
-    && apt-get install -y build-essential \
-    && apt-get install -y python-dev \
-    && python --version \
+    && apt-get install -y build-essential curl git python python-dev python-setuptools vim wget \
     && easy_install pip \
     && pip install panoramix
 
